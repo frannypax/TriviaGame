@@ -6,42 +6,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week4HomeworkStarWarsRPGGame</title>
+  <title>Week5-TriviaQuiz</title>
  <!-- reset css -->
   <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"> -->
    <!-- css -->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
    <!-- Bootstrap - css -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
 
 <body>
-	<div id="container">
-		<header><h1>Javascript Quiz</h1>
+	<div class="row">
+	<div id="container" style="padding-left:5%";>
+		<header>
+			<h1>General Knowledge Quiz</h1>
+			<h3>You Have 30 seconds Starting Now</h>
 		</header>
+		<div id="timeRemaining"></div>
+		<hr/>
 		<section>
 			<!-- creating empty div, where score will be shown -->
-			<div id=results>  
+			<div id=results> 
 			</div> 
 
-			<form name="quizForm" onsubmit="return submitAnswers()">
+			<form name="quizForm" onsubmit="return submitAnswers()"  style="padding-top: 20px">
 				<h4>1. What is 3!</h4>
 				<input type="radio" name="question1" value="a" id="question1a">a.6<br>
 				<input type="radio" name="question1" value="b" id="question1b">b.7<br>
 				<input type="radio" name="question1" value="c" id="question1c">c.8<br>
 
-				<h4>2. What is 4!</h4>
-				<input type="radio" name="question2" value="a" id="question1a">a.6<br>
-				<input type="radio" name="question2" value="b" id="question1b">b.8<br>
-				<input type="radio" name="question2" value="c" id="question1c">c.24<br>
+				<h4>2. One of these is a prime number!</h4>
+				<input type="radio" name="question2" value="a" id="question2a">a.1<br>
+				<input type="radio" name="question2" value="b" id="question2b">b.2<br>
+				<input type="radio" name="question2" value="c" id="question2c">c.3<br>
+
+				<h4>3. What is the capital of USA?</h4>
+				<input type="radio" name="question3" value="a" id="question3a">a.DC<br>
+				<input type="radio" name="question3" value="b" id="question3b">b.NY<br>
+				<input type="radio" name="question3" value="c" id="question3c">c.London<br>
+
+				<h4>4. The density of water is 1000kg/m^3</h4>
+				<input type="radio" name="question4" value="a" id="question4a">a.True<br>
+				<input type="radio" name="question4" value="b" id="question4b">b.False<br>
+
+				<h4>5. Javascript is a ____ language.</h4>
+				<input type="radio" name="question5" value="a" id="question5a">a.Markup<br>
+				<input type="radio" name="question5" value="b" id="question5b">b.Database<br>
+				<input type="radio" name="question5" value="c" id="question5c">c.Scripting<br>
+				
 				<br><br>
-				<input type="submit" value="submit Answers">
+				<button type="submit" value="submit Answers">submit Answers</button>
 
 			</form>
 		</section>
+		<hr/>
 		<footer>
-			<p>Copyright </p>
+			</br>
+			</br>
+			</br>
+			</br>
+			<p style="text-align: center">Copyright @FrancisAsirifi</p>
+			</br>
 		</footer>
 	</div>
 	
@@ -54,6 +80,7 @@
 	</script>
   	<!-- Javascript -->
 	<script type="text/javascript" src="./assets/javascript/app.js" ></script>
+	</div>
 </body>
 
 </html>
