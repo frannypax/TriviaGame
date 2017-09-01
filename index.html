@@ -1,0 +1,59 @@
+
+<!-- Homework1 As-->
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week4HomeworkStarWarsRPGGame</title>
+ <!-- reset css -->
+  <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"> -->
+   <!-- css -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+   <!-- Bootstrap - css -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+	<div id="container">
+		<header><h1>Javascript Quiz</h1>
+		</header>
+		<section>
+			<!-- creating empty div, where score will be shown -->
+			<div id=results>  
+			</div> 
+
+			<form name="quizForm" onsubmit="return submitAnswers()">
+				<h4>1. What is 3!</h4>
+				<input type="radio" name="question1" value="a" id="question1a">a.6<br>
+				<input type="radio" name="question1" value="b" id="question1b">b.7<br>
+				<input type="radio" name="question1" value="c" id="question1c">c.8<br>
+
+				<h4>2. What is 4!</h4>
+				<input type="radio" name="question2" value="a" id="question1a">a.6<br>
+				<input type="radio" name="question2" value="b" id="question1b">b.8<br>
+				<input type="radio" name="question2" value="c" id="question1c">c.24<br>
+				<br><br>
+				<input type="submit" value="submit Answers">
+
+			</form>
+		</section>
+		<footer>
+			<p>Copyright </p>
+		</footer>
+	</div>
+	
+
+	<!-- JQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+		crossorigin="anonymous">
+	</script>
+  	<!-- Javascript -->
+	<script type="text/javascript" src="./assets/javascript/app.js" ></script>
+</body>
+
+</html>
