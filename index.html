@@ -29,8 +29,11 @@
 			<!-- creating empty div, where score will be shown -->
 			<div id=results> 
 			</div> 
-
-			<form name="quizForm" onsubmit="return submitAnswers()"  style="padding-top: 20px">
+			<div>
+				<input type="button" value="Start Quiz">
+			</div>
+			<form name="quizForm" style="padding-top: 20px"> 
+			<!-- onsubmit="return submitAnswers() -->
 				<h4>1. What is 3!</h4>
 				<input type="radio" name="question1" value="a" id="question1a">a.6<br>
 				<input type="radio" name="question1" value="b" id="question1b">b.7<br>
@@ -56,7 +59,7 @@
 				<input type="radio" name="question5" value="c" id="question5c">c.Scripting<br>
 				
 				<br><br>
-				<button type="submit" value="submit Answers">submit Answers</button>
+				<input type="button" value="Submit Answers">
 
 			</form>
 		</section>
