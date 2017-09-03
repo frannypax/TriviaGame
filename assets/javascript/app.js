@@ -6,14 +6,10 @@ var score =0;
 var answers = ["a", "b", "DC","True", "c"];
 var total=answers.length
 console.log(total);
-// 
 
-
-$('input[type="button"][value="Submit Answers"]').click(function(){
-//function to get submit form on completion
-
-	//getting user inputs
-	var question1 = document.forms["quizForm"]["question1"].value;
+$('input[type="button"][value="Submit Answers"]').click(function(){ //lines 12 to 42 will run when submit is clicked
+		
+	var question1 = document.forms["quizForm"]["question1"].value; //getting user inputs
 	var question2 = document.forms["quizForm"]["question2"].value;
 	var question3 = document.forms["quizForm"]["question3"].value;
 	var question4 = document.forms["quizForm"]["question4"].value;
@@ -22,12 +18,14 @@ $('input[type="button"][value="Submit Answers"]').click(function(){
 
 	//validating the form
 	for (var i=1; i<=total; i++){
-		if( eval("question" + i) == null || eval("question" + i) == ""){
-			//eval is being used to output question1, question2, etc.
+		if( eval("question" + i) == null || eval("question" + i) == ""){ //eval is being used to output question1, question2, etc.
+			
 			alert("Please answer question " + i)
 			return false;
 		}
 	}
+	
+	$(this).attr("disabled", "disabled");
 
 	//calculating score
 	for (var i=1; i<=total; i++){
@@ -36,19 +34,20 @@ $('input[type="button"][value="Submit Answers"]').click(function(){
 	}
 	}
 
-	// displaing results in results to html
+	// displaying results in results to html
 	var results = $("#results");
 	$("<h3> Total Score: " + score + " out of " + total + "</h3>").appendTo(results);
 	// $("#results").append("<h3> Total Score: " + score + " out of " + total + "</h3>");
 
 	return false;
-
 });
 
 
-
+	//function to countdown Time
 	$('input[type="button"][value="Start Quiz"]').click(function(){
-		//function to countdown Time
+		
+		
+		$(this).attr("disabled", "disabled"); //this code will disable the button after being clicked
 		var timeLeft = 30;
 		var displayTime = $("#timeRemaining").html("<h4 style=color:red>" + timeLeft+ " Seconds Remaining.</h4>");
 		var timerId = setInterval(countdown, 1000);
