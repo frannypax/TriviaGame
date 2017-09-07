@@ -5,6 +5,7 @@ $( document ).ready(function() {
 var score =0;
 var answers = ["a", "b", "DC","True", "c"];
 var total=answers.length
+var timerId;
 console.log(total);
 
 $('input[type="button"][value="Submit Answers"]').click(function(){ //lines 12 to 42 will run when submit is clicked
@@ -14,7 +15,7 @@ $('input[type="button"][value="Submit Answers"]').click(function(){ //lines 12 t
 	var question3 = document.forms["quizForm"]["question3"].value;
 	var question4 = document.forms["quizForm"]["question4"].value;
 	var question5 = document.forms["quizForm"]["question5"].value;
-
+	clearInterval(timerId);
 
 	//validating the form
 	for (var i=1; i<=total; i++){
@@ -50,7 +51,7 @@ $('input[type="button"][value="Submit Answers"]').click(function(){ //lines 12 t
 		$(this).attr("disabled", "disabled"); //this code will disable the button after being clicked
 		var timeLeft = 30;
 		var displayTime = $("#timeRemaining").html("<h4 style=color:red>" + timeLeft+ " Seconds Remaining.</h4>");
-		var timerId = setInterval(countdown, 1000);
+		timerId = setInterval(countdown, 1000);
 
 		function countdown() {
 	 	if (timeLeft == 0) {
